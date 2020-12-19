@@ -44,7 +44,7 @@ class LinkedList {
       output += currentNode.data + ' ';
       currentNode = currentNode.next;
     }
-    output += `<tail>`;
+    output += '<tail>';
     console.log(output);
   }
 

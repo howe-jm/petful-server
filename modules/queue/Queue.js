@@ -18,7 +18,6 @@ class Queue {
     if (this.hasRoom()) {
       this.queue.addToTail(data);
       this.size++;
-      console.log(`Added ${data} to queue! Queue size is now ${this.size}.`);
     } else {
       throw new Error('Queue is full!');
     }
@@ -28,7 +27,6 @@ class Queue {
     if (!this.isEmpty()) {
       const data = this.queue.removeHead();
       this.size--;
-      console.log(`Removed ${data} from queue! Queue size is now ${this.size}.`);
       return data;
     } else {
       throw new Error('Queue is empty!');
