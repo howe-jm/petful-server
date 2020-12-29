@@ -10,6 +10,11 @@ router.get('/', (req, res) => {
   return res.json(person).status(200);
 });
 
+router.get('/all', (req, res) => {
+  let people = People.getAll();
+  return res.json(people).status(200);
+});
+
 router.post('/', json, (req, res) => {
   const { person } = req.body;
   People.enqueue(person);
