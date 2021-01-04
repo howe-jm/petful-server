@@ -13,9 +13,10 @@ router.get('/', (req, res, next) => {
 
 router.delete('/', json, (req, res) => {
   const { type } = req.body;
-  Pets.dequeue(type);
-  People.dequeue();
-  return res.status(204).end();
+  let pet = Pets.dequeue(type);
+  let person = People.dequeue();
+  let response = { pet, person };
+  return res.json(response).status(200);
 });
 
 module.exports = router;
