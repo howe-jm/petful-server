@@ -1,7 +1,17 @@
 {
   "name": "petful-server",
+  "version": "1.0.0",
+  "description": "Description",
+  "main": "index.js",
+  "author": "howe-jm",
+  "license": "ISC",
   "scripts": {
-    "dev": "nodemon server"
+    "dev": "nodemon server",
+    "predeploy": "npm audit",
+    "deploy": "git push heroku main"
+  },
+  "engines": {
+    "node": "12.18.4"
   },
   "dependencies": {
     "body-parser": "^1.19.0",
