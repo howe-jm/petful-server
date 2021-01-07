@@ -21,6 +21,17 @@ module.exports = {
     return { dog, cat };
   },
 
+  getAll() {
+    let cats = pets.cats.all();
+    let dogs = pets.dogs.all();
+    return { dogs, cats };
+  },
+
+  requeue(type, pet) {
+    type === 'dog' ? pets.dogs.enqueue(pet) : pets.cats.enqueue(pet);
+    return;
+  },
+
   dequeue(type) {
     if (type === 'cat') {
       return pets.cats.dequeue();

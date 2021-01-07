@@ -11,6 +11,17 @@ router.get('/', (req, res, next) => {
   return res.json(pets).status(200);
 });
 
+router.get('/allpets', (req, res, next) => {
+  let petsObj = Pets.getAll();
+  return res.json(petsObj).status(200);
+});
+
+router.post('/return', json, (req, res, next) => {
+  const { type, pet } = req.body;
+  Pets.requeue(type, pet);
+  return res.status(200).end();
+});
+
 router.delete('/', json, (req, res) => {
   const { type } = req.body;
   let pet = Pets.dequeue(type);

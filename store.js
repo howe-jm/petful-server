@@ -1,5 +1,5 @@
 module.exports = {
-  people: ['Randy', 'Jenny', 'Jim', 'Lisa', 'David', 'Ed'],
+  people: ['Randy', 'Jenny', 'Jim', 'Lisa'],
 
   dogs: [
     {
