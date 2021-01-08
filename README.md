@@ -2,7 +2,13 @@
 
 Hello!
 
-Petful is a pet adoption webapp using the following technologies: Express, React, and Node! It does not currently use a database for storage purposes, as it is a demonstration app.
+Petful is a webapp to simulate the adoption process for pets using a first-in, first-out system that showcases the functions of linked lists and queues!
+
+### Petful is a pet adoption webapp using the following technologies:
+
+Client: Node.js, coupled with React for responsive web design.
+
+Server: Node.js with Express.js.
 
 Petful allows a user to enter a queue and wait in line to adopt a pet. While waiting, the user can watch other peoples' names move through the queue, with each one adopting a pet as they reach the top. When it's their turn, the user can choose between the next available cat or dog in their respective queues.
 
@@ -34,7 +40,7 @@ Live App: https://petful-client-three.vercel.app/
 
 ## Petful API
 
-This is the API for the Petful job and training tracker app.
+This is the API for the Petful pet adoption app.
 
 ### Set up
 
